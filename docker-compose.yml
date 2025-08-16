@@ -17,13 +17,13 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
       args:
-        VITE_API_URL: http://http://ec2-16-16-27-47.eu-north-1.compute.amazonaws.com:8000
+        VITE_API_URL: http://ec2-16-16-27-47.eu-north-1.compute.amazonaws.com:8000
     ports:
       - "80:80"
     depends_on:
       - backend
     environment:
-      - VITE_API_URL=http://http://ec2-16-16-27-47.eu-north-1.compute.amazonaws.com:8000
+      - VITE_API_URL=http://ec2-16-16-27-47.eu-north-1.compute.amazonaws.com:8000
     networks:
       - app-network
 
