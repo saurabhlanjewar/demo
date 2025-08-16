@@ -20,7 +20,7 @@ Thumbs.db
 
 # Docker
 .dockerignore
-**/Dockerfile
+
 
 # Misc
 *.swp
