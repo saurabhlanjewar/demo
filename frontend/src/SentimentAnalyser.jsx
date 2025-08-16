@@ -6,6 +6,8 @@ const SentimentAnalyzer = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  const apiUrl = import.meta.env.VITE_API_URL;
+
   const analyzeSentiment = async () => {
     if (!inputText.trim()) {
       setError("Please enter some text to analyze");
@@ -16,7 +18,7 @@ const SentimentAnalyzer = () => {
     setError(null);
 
     try {
-      const response = await fetch("http://localhost:8000/analyze", {
+      const response = await fetch(`${apiUrl}/analyze`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
